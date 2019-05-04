@@ -5,21 +5,24 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use UsersTableSeeder;
 
-class UpdateUserTest extends TestCase
+class CountUserTest extends TestCase
 {
     /**
      * A basic unit test example.
      *
      * @return void
      */
-
     public function testExample()
     {
-        $user = \App\User::find(42);
-        echo $user["name"];
-        $user->name='Steve Smith';
-        $user->save();
-        $this->assertTrue($user->save());
+        $usercount = \App\User::count();
+        $isSeeded = false;
+        if($usercount >= "50" ){
+            $isSeeded = true;
+        }
+        $this->assertTrue($isSeeded);
+
+
     }
 }

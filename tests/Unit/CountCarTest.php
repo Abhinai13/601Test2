@@ -17,7 +17,7 @@ class CountCarTest extends TestCase
     {
         $carcount = \App\Car::count();
         $isSeeded = false;
-        if($carcount >= "50" ){
+        if($carcount = "50" ){
             $isSeeded = true;
         }
         $this->assertTrue($isSeeded);
@@ -25,3 +25,5 @@ class CountCarTest extends TestCase
 
     }
 }
+
+

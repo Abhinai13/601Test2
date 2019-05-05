@@ -7,20 +7,20 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 
-/**
+
 class DeleteCarTest extends TestCase
 {
-
+/*
      * A basic unit test example.
      *
      * @return void
-
+*/
     public function testExample()
     {
-        $car = \App\Car::find(12);
+        $car = \App\Car::find(32);
         $delete= $car->delete();
         $this->assertTrue($delete);
 
     }
 }
-     * */
+
